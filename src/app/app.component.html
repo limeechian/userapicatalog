@@ -1,0 +1,21 @@
+<!-- This app.component.html is known as the main UI file -->
+
+
+<div class="container mt-4 mb-4"> <!-- shortcut type: div.container + tab, mt means margin top, mb means margin bottom -->
+    <div class="row">
+        <div class="col-xs-12"> <!-- col means column, xs means extra small -->
+            <h2>{{ title }}</h2>
+            <hr> <!-- hr means line break -->
+            <router-outlet></router-outlet>            
+        </div>
+    </div>
+</div>
+
+
+<!-- <router-outlet></router-outlet>, The way that we say where we want to show the ui after we set up our routing is by using the router-outlet, 
+So, whenever a route is loaded and the component is gonna be loaded, we want to load it in this specific location,
+so, now we're gonna load it in the specific html(app.component.html), so the router-outlet is being set here. 
+* So, that's why the router-outlet is really important, because it tells angular where to display a specific ui, or a specific component, 
+* or the ui of a component when a specific route is loaded. So, now if we go back to the browser, we can see "users works!" when
+* typing '/users'; and if we go forward by typing '/user/:uuid', where ':uuid' means some random id, then we can see "userdetail works!" -->
+
